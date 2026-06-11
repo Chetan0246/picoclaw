@@ -73,6 +73,12 @@ PicoClaw provides a suite of 15 lightweight, modern developer tools:
 
 ## Getting Started
 
+### Fedora Linux Prerequisites
+To install the required systems on **Fedora Linux**, run:
+```bash
+sudo dnf install -y git python3 python3-pip sqlite
+```
+
 ### 1. Start Your Local LLM server
 Run your local model using `llama.cpp` or `Ollama`.
 
