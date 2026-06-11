@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicoClaw Dashboard</title>
+    <!-- Modern Premium Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Background Glow Blobs for Glassmorphism -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="app-container">
+        <!-- Sidebar: Sessions & Facts -->
+        <aside class="sidebar glass">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-emoji">🐾</span>
+                    <h2>PicoClaw</h2>
+                </div>
+                <button id="new-session-btn" class="btn-primary-glass">+ New Chat</button>
+            </div>
+
+            <!-- Chat Sessions List -->
+            <div class="sidebar-section">
+                <h3>Chat Sessions</h3>
+                <div id="session-list" class="scrollable-list">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Persistent Facts/Memory List -->
+            <div class="sidebar-section memory-section">
+                <h3>Memory Vault (Hermes)</h3>
+                <div id="memory-list" class="scrollable-list">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-chat glass">
+            <header class="chat-header">
+                <div class="header-info">
+                    <h1 id="active-session-title">cli_default_session</h1>
+                    <span id="agent-status" class="status-badge status-idle">Idle</span>
+                </div>
+                <div class="header-actions">
+                    <button id="clear-history-btn" class="btn-danger-glass">Clear Chat</button>
+                </div>
+            </header>
+
+            <!-- Messages Window -->
+            <div id="messages-container" class="messages-window">
+                <!-- Loaded dynamically -->
+                <div class="welcome-card glass">
+                    <h3>Welcome to PicoClaw Dashboard</h3>
+                    <p>I am your local developer assistant, optimized for 9B models. Ask me to list directories, write scripts, search codebase patterns, or compile files.</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <footer class="input-area">
+                <form id="chat-form">
+                    <input type="text" id="chat-input" placeholder="Ask PicoClaw to write code, edit files, or execute tests..." autocomplete="off" required>
+                    <button type="submit" id="send-btn" class="btn-send">Send</button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <!-- UI Scripts -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
